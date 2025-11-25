@@ -16,16 +16,15 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author Admin
  */
-
-public class frm_Vigenere extends javax.swing.JFrame {
+public class frm_Transposition extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger
-            .getLogger(frm_Vigenere.class.getName());
+            .getLogger(frm_Transposition.class.getName());
 
     /**
-     * Creates new form frm_Vigenere
+     * Creates new form frm_Transposition
      */
-    public frm_Vigenere() {
+    public frm_Transposition() {
         initComponents();
     }
 
@@ -36,7 +35,7 @@ public class frm_Vigenere extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -84,62 +83,80 @@ public class frm_Vigenere extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        jLabel4.setText("Vigenere Cipher Demo");
+        jLabel4.setText("Transposition Cipher Demo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2)
-                            .addComponent(jScrollPane3)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(btn_encrypt)
-                        .addGap(85, 85, 85)
-                        .addComponent(btn_decrypt)
-                        .addGap(83, 83, 83)
-                        .addComponent(btn_openFile)))
-                .addContainerGap(28, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(24, 24, 24)
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel3,
+                                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 75,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGroup(layout
+                                                                .createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                .addComponent(jLabel2,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 75,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jLabel1,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 75,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                                                false)
+                                                        .addComponent(jScrollPane1,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, 590,
+                                                                Short.MAX_VALUE)
+                                                        .addComponent(jScrollPane2)
+                                                        .addComponent(jScrollPane3)))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(173, 173, 173)
+                                                .addComponent(btn_encrypt)
+                                                .addGap(85, 85, 85)
+                                                .addComponent(btn_decrypt)
+                                                .addGap(83, 83, 83)
+                                                .addComponent(btn_openFile))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(162, 162, 162)
+                                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 650,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(28, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel4)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_encrypt)
-                    .addComponent(btn_decrypt)
-                    .addComponent(btn_openFile))
-                .addGap(24, 24, 24))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel4)
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel1))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 26,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel2))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24,
+                                        Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btn_encrypt)
+                                        .addComponent(btn_decrypt)
+                                        .addComponent(btn_openFile))
+                                .addGap(24, 24, 24)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -166,7 +183,7 @@ public class frm_Vigenere extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Please enter a key.");
                 return;
             }
-            String ciphertext = VigenereCipher.encrypt(plaintext, key);
+            String ciphertext = TranspositionCipher.encrypt(plaintext, key);
             JOptionPane.showMessageDialog(this, "Encrypted successfully.");
             txt_ciphertext.setText(ciphertext);
             saveToFile(ciphertext);
@@ -183,7 +200,7 @@ public class frm_Vigenere extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Please enter a key.");
                 return;
             }
-            String plaintext = VigenereCipher.decrypt(ciphertext, key);
+            String plaintext = TranspositionCipher.decrypt(ciphertext, key);
             JOptionPane.showMessageDialog(this, "Decrypted successfully.");
             txt_plaintext.setText(plaintext);
         } catch (Exception e) {
@@ -192,7 +209,6 @@ public class frm_Vigenere extends javax.swing.JFrame {
     }// GEN-LAST:event_btn_decryptActionPerformed
 
     private void btn_openFileActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_openFileActionPerformed
-        // TODO add your handling code here:
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setFileFilter(new FileNameExtensionFilter("Text Files", "txt"));
         int userSelection = fileChooser.showOpenDialog(this);
@@ -233,7 +249,7 @@ public class frm_Vigenere extends javax.swing.JFrame {
         // </editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new frm_Vigenere().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new frm_Transposition().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
